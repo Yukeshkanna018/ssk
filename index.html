@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Pongal 🌞 - Tamil Harvest Festival Greetings</title>
+    <meta name="description" content="Celebrate Pongal with beautiful greetings! A festive website honoring Tamil Nadu's harvest festival of gratitude, prosperity, and cultural pride." />
+    <meta name="author" content="Lovable" />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        :root {
+            --primary: 24 100% 50%;
+            --secondary: 46 100% 50%;
+            --accent: 120 40% 50%;
+            --background: 30 33% 98%;
+            --foreground: 0 0% 13%;
+            --card: 30 40% 96%;
+            --muted-foreground: 0 0% 45%;
+            --border: 30 20% 85%;
+            --gold: 46 100% 50%;
+            --saffron: 24 100% 50%;
+            --terracotta: 12 60% 50%;
+            --harvest-green: 120 40% 50%;
+            --cream: 40 80% 92%;
+            --deep-brown: 12 40% 25%;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: hsl(var(--background));
+            color: hsl(var(--foreground));
+            overflow-x: hidden;
+        }
+
+        .font-display {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .font-body {
+            font-family: 'Nunito', sans-serif;
+        }
+
+        /* Text Gradient */
+        .text-gradient-sun {
+            background: linear-gradient(90deg, hsl(24, 100%, 50%), hsl(46, 100%, 50%), hsl(120, 40%, 50%));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Card Shadows */
+        .shadow-card {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .shadow-warm {
+            box-shadow: 0 15px 40px rgba(255, 107, 0, 0.15);
+        }
+
+        /* Background Gradients */
+        .bg-gradient-hero {
+            background: linear-gradient(135deg, 
+                rgba(255, 107, 0, 0.05) 0%, 
+                rgba(255, 193, 0, 0.05) 50%, 
+                rgba(76, 175, 80, 0.05) 100%);
+        }
+
+        .bg-card {
+            background-color: hsl(30, 40%, 96%);
+        }
+
+        /* Animations */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes rays {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .animate-rays {
+            animation: rays 60s linear infinite;
+        }
+
+        /* Custom Utilities */
+        .bg-background { background-color: hsl(30, 33%, 98%); }
+        .bg-foreground { background-color: hsl(0, 0%, 13%); }
+        .text-foreground { color: hsl(0, 0%, 13%); }
+        .text-muted-foreground { color: hsl(0, 0%, 45%); }
+        .border-border { border-color: hsl(30, 20%, 85%); }
+        .bg-primary { background-color: hsl(24, 100%, 50%); }
+        .text-primary { color: hsl(24, 100%, 50%); }
+        .bg-secondary { background-color: hsl(46, 100%, 50%); }
+        .text-secondary { color: hsl(46, 100%, 50%); }
+        .bg-accent { background-color: hsl(120, 40%, 50%); }
+        .text-accent { color: hsl(120, 40%, 50%); }
+        .bg-gold { background-color: hsl(46, 100%, 50%); }
+
+        /* Section Paddings */
+        .section-py {
+            padding-top: 6rem;
+            padding-bottom: 6rem;
+        }
+
+        @media (min-width: 768px) {
+            .section-py {
+                padding-top: 8rem;
+                padding-bottom: 8rem;
+            }
+        }
+
+        /* Container */
+        .container-custom {
+            width: 100%;
+            max-width: 1280px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+        @media (min-width: 640px) {
+            .container-custom {
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .container-custom {
+                padding-left: 2rem;
+                padding-right: 2rem;
+            }
+        }
+
+        /* Kolam Divider Background Pattern */
+        .kolam-divider {
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='20' viewBox='0 0 100 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 10 Q25 0 50 10 Q75 20 100 10' stroke='hsl(24 100% 50% / 0.3)' stroke-width='1.5' fill='none'/%3E%3Cpath d='M0 10 Q25 20 50 10 Q75 0 100 10' stroke='hsl(24 100% 50% / 0.3)' stroke-width='1.5' fill='none'/%3E%3Ccircle cx='50' cy='10' r='2.5' fill='hsl(24 100% 50%)' fill-opacity='0.6'/%3E%3Ccircle cx='30' cy='10' r='1.5' fill='hsl(46 100% 50%)' fill-opacity='0.4'/%3E%3Ccircle cx='70' cy='10' r='1.5' fill='hsl(46 100% 50%)' fill-opacity='0.4'/%3E%3C/svg%3E");
+            background-repeat: repeat-x;
+            background-size: 200px 20px;
+        }
+
+        /* Scroll Animation Classes */
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        .scroll-animate.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body class="bg-background">
+    <!-- Hero Section -->
+    <section class="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-amber-50 to-orange-50 relative overflow-hidden">
+        <!-- Decorative Elements -->
+        <div class="absolute top-10 left-5 w-20 h-20 bg-yellow-200 rounded-full opacity-30 blur-xl"></div>
+        <div class="absolute bottom-10 right-5 w-32 h-32 bg-orange-200 rounded-full opacity-30 blur-xl"></div>
+        <div class="absolute top-1/3 right-10 w-16 h-16 bg-red-100 rounded-full opacity-20"></div>
+        
+        <!-- Main Content -->
+        <div class="text-center max-w-4xl mx-auto px-4 relative z-10">
+            <div class="mb-8">
+                <span class="text-6xl md:text-8xl inline-block animate-float">🌞</span>
+            </div>
+            
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-gray-900 mb-6 scroll-animate">
+                Happy <span class="text-gradient-sun">Pongal</span> 2024!
+            </h1>
+            
+            <p class="text-xl md:text-2xl font-body text-gray-700 mb-10 max-w-2xl mx-auto leading-relaxed scroll-animate" style="transition-delay: 0.1s">
+                Celebrating the Tamil harvest festival of thanksgiving, prosperity, and joy.
+            </p>
+            
+            <div class="flex flex-wrap justify-center gap-4 mb-12 scroll-animate" style="transition-delay: 0.2s">
+                <span class="px-4 py-2 bg-gradient-to-r from-amber-500 to-orange-500 text-white font-body font-semibold rounded-full">Harvest Festival</span>
+                <span class="px-4 py-2 bg-gradient-to-r from-emerald-400 to-green-500 text-white font-body font-semibold rounded-full">Thai Pongal</span>
+                <span class="px-4 py-2 bg-gradient-to-r from-red-400 to-pink-500 text-white font-body font-semibold rounded-full">Sun God</span>
+            </div>
+            
+            <div class="text-lg font-body text-gray-600 italic max-w-xl mx-auto scroll-animate" style="transition-delay: 0.3s">
+                "Let the sweetness of Pongal fill your home with happiness and prosperity"
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <svg class="w-6 h-6 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Kolam Divider 1 -->
+    <div class="py-8 bg-background overflow-hidden">
+        <div class="flex items-center justify-center gap-4">
+            <!-- Left Pattern -->
+            <div class="hidden sm:flex items-center gap-2">
+                <div class="w-2 h-2 rounded-full bg-orange-400/30" style="transform: scale(1)"></div>
+                <div class="w-2 h-2 rounded-full bg-orange-400/30" style="transform: scale(0.85)"></div>
+                <div class="w-2 h-2 rounded-full bg-orange-400/30" style="transform: scale(0.7)"></div>
+                <div class="w-2 h-2 rounded-full bg-orange-400/30" style="transform: scale(0.55)"></div>
+                <div class="w-2 h-2 rounded-full bg-orange-400/30" style="transform: scale(0.4)"></div>
+            </div>
+
+            <!-- Central Kolam Design -->
+            <svg viewBox="0 0 120 40" class="w-32 h-12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="dividerGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="hsl(24, 100%, 50%)" stop-opacity="0.3" />
+                        <stop offset="50%" stop-color="hsl(46, 100%, 50%)" stop-opacity="0.5" />
+                        <stop offset="100%" stop-color="hsl(24, 100%, 50%)" stop-opacity="0.3" />
+                    </linearGradient>
+                </defs>
+                
+                <!-- Horizontal lines -->
+                <path d="M0 20 Q30 10 60 20 Q90 30 120 20" stroke="url(#dividerGradient)" stroke-width="2" fill="none" />
+                <path d="M0 20 Q30 30 60 20 Q90 10 120 20" stroke="url(#dividerGradient)" stroke-width="2" fill="none" />
+                
+                <!-- Center dots -->
+                <circle cx="60" cy="20" r="4" fill="hsl(24, 100%, 50%)" />
+                <circle cx="40" cy="20" r="2" fill="hsl(46, 100%, 50%)" />
+                <circle cx="80" cy="20" r="2" fill="hsl(46, 100%, 50%)" />
+                <circle cx="20" cy="20" r="1.5" fill="hsl(24, 100%, 50%, 0.5)" />
+                <circle cx="100" cy="20" r="1.5" fill="hsl(24, 100%, 50%, 0.5)" />
+            </svg>
+
+            <!-- Right Pattern -->
+            <div class="hidden sm:flex items-center gap-2">
+                <div class="w-2 h-2 rounded-full bg-orange-400/30" style="transform: scale(0.4)"></div>
+                <div class="w-2 h-2 rounded-full bg-orange-400/30" style="transform: scale(0.55)"></div>
+                <div class="w-2 h-2 rounded-full bg-orange-400/30" style="transform: scale(0.7)"></div>
+                <div class="w-2 h-2 rounded-full bg-orange-400/30" style="transform: scale(0.85)"></div>
+                <div class="w-2 h-2 rounded-full bg-orange-400/30" style="transform: scale(1)"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="section-py bg-card relative overflow-hidden">
+        <!-- Kolam Pattern Background -->
+        <div class="absolute inset-0 kolam-divider opacity-50"></div>
+
+        <div class="container-custom relative z-10">
+            <div class="max-w-4xl mx-auto">
+                <!-- Section Header -->
+                <div class="text-center mb-16 scroll-animate active">
+                    <span class="inline-block text-sm font-body text-orange-600 font-semibold tracking-widest uppercase mb-4">
+                        The Festival
+                    </span>
+                    <h2 class="text-4xl md:text-5xl font-display font-bold text-gray-900 mb-6">
+                        About <span class="text-gradient-sun">Pongal</span>
+                    </h2>
+                    <div class="w-24 h-1 bg-gradient-to-r from-orange-500 via-yellow-500 to-green-500 mx-auto rounded-full"></div>
+                </div>
+
+                <!-- Content Cards -->
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Card 1 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-card transition-all duration-300 hover:shadow-warm hover:-translate-y-1 scroll-animate active" style="transition-delay: 0.2s">
+                        <div class="w-16 h-16 bg-orange-100 rounded-xl flex items-center justify-center mb-6">
+                            <span class="text-3xl">🌾</span>
+                        </div>
+                        <h3 class="text-xl font-display font-semibold text-gray-900 mb-4">
+                            Harvest Celebration
+                        </h3>
+                        <p class="font-body text-gray-600 leading-relaxed">
+                            Pongal is a four-day harvest festival celebrated in Tamil Nadu, 
+                            marking the end of winter solstice and the beginning of the sun's 
+                            six-month journey northward. It's a time of thanksgiving to the Sun God, 
+                            nature, and farm animals for a bountiful harvest.
+                        </p>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-card transition-all duration-300 hover:shadow-warm hover:-translate-y-1 scroll-animate active" style="transition-delay: 0.3s">
+                        <div class="w-16 h-16 bg-yellow-100 rounded-xl flex items-center justify-center mb-6">
+                            <span class="text-3xl">🍚</span>
+                        </div>
+                        <h3 class="text-xl font-display font-semibold text-gray-900 mb-4">
+                            The Sweet Ritual
+                        </h3>
+                        <p class="font-body text-gray-600 leading-relaxed">
+                            The festival gets its name from the Tamil word "pongu" meaning 
+                            "to boil over." Freshly harvested rice is cooked with milk and 
+                            jaggery in a clay pot until it overflows — symbolizing abundance 
+                            and prosperity in the coming year.
+                        </p>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-card transition-all duration-300 hover:shadow-warm hover:-translate-y-1 scroll-animate active" style="transition-delay: 0.4s">
+                        <div class="w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center mb-6">
+                            <span class="text-3xl">🎨</span>
+                        </div>
+                        <h3 class="text-xl font-display font-semibold text-gray-900 mb-4">
+                            Kolam Art
+                        </h3>
+                        <p class="font-body text-gray-600 leading-relaxed">
+                            Homes are adorned with beautiful kolam patterns — intricate geometric 
+                            designs drawn with rice flour at doorsteps. These designs welcome 
+                            guests and are believed to bring prosperity while feeding ants 
+                            and small creatures.
+                        </p>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-card transition-all duration-300 hover:shadow-warm hover:-translate-y-1 scroll-animate active" style="transition-delay: 0.5s">
+                        <div class="w-16 h-16 bg-amber-100 rounded-xl flex items-center justify-center mb-6">
+                            <span class="text-3xl">🐄</span>
+                        </div>
+                        <h3 class="text-xl font-display font-semibold text-gray-900 mb-4">
+                            Mattu Pongal
+                        </h3>
+                        <p class="font-body text-gray-600 leading-relaxed">
+                            The third day honors cattle — the backbone of agriculture. 
+                            Cows and bulls are bathed, decorated with garlands, painted horns, 
+                            and bells. They're fed the special pongal dish as a gesture of 
+                            gratitude for their tireless service.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kolam Divider 2 -->
+    <div class="py-8 bg-background overflow-hidden">
+        <div class="flex items-center justify-center gap-4">
+            <!-- Left Pattern -->
+            <div class="hidden sm:flex items-center gap-2">
+                <div class="w-2 h-2 rounded-full bg-yellow-500/30" style="transform: scale(1)"></div>
+                <div class="w-2 h-2 rounded-full bg-yellow-500/30" style="transform: scale(0.85)"></div>
+                <div class="w-2 h-2 rounded-full bg-yellow-500/30" style="transform: scale(0.7)"></div>
+                <div class="w-2 h-2 rounded-full bg-yellow-500/30" style="transform: scale(0.55)"></div>
+                <div class="w-2 h-2 rounded-full bg-yellow-500/30" style="transform: scale(0.4)"></div>
+            </div>
+
+            <!-- Central Kolam Design -->
+            <svg viewBox="0 0 120 40" class="w-32 h-12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="dividerGradient2" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="hsl(46, 100%, 50%)" stop-opacity="0.3" />
+                        <stop offset="50%" stop-color="hsl(120, 40%, 50%)" stop-opacity="0.5" />
+                        <stop offset="100%" stop-color="hsl(46, 100%, 50%)" stop-opacity="0.3" />
+                    </linearGradient>
+                </defs>
+                
+                <!-- Horizontal lines -->
+                <path d="M0 20 Q30 10 60 20 Q90 30 120 20" stroke="url(#dividerGradient2)" stroke-width="2" fill="none" />
+                <path d="M0 20 Q30 30 60 20 Q90 10 120 20" stroke="url(#dividerGradient2)" stroke-width="2" fill="none" />
+                
+                <!-- Center dots -->
+                <circle cx="60" cy="20" r="4" fill="hsl(46, 100%, 50%)" />
+                <circle cx="40" cy="20" r="2" fill="hsl(120, 40%, 50%)" />
+                <circle cx="80" cy="20" r="2" fill="hsl(120, 40%, 50%)" />
+                <circle cx="20" cy="20" r="1.5" fill="hsl(46, 100%, 50%, 0.5)" />
+                <circle cx="100" cy="20" r="1.5" fill="hsl(46, 100%, 50%, 0.5)" />
+            </svg>
+
+            <!-- Right Pattern -->
+            <div class="hidden sm:flex items-center gap-2">
+                <div class="w-2 h-2 rounded-full bg-yellow-500/30" style="transform: scale(0.4)"></div>
+                <div class="w-2 h-2 rounded-full bg-yellow-500/30" style="transform: scale(0.55)"></div>
+                <div class="w-2 h-2 rounded-full bg-yellow-500/30" style="transform: scale(0.7)"></div>
+                <div class="w-2 h-2 rounded-full bg-yellow-500/30" style="transform: scale(0.85)"></div>
+                <div class="w-2 h-2 rounded-full bg-yellow-500/30" style="transform: scale(1)"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wishes Section -->
+    <section class="section-py bg-gradient-hero relative overflow-hidden">
+        <!-- Decorative Elements -->
+        <div class="absolute top-10 left-10 w-32 h-32 bg-orange-200/30 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-10 right-10 w-40 h-40 bg-yellow-200/30 rounded-full blur-3xl"></div>
+
+        <div class="container-custom
